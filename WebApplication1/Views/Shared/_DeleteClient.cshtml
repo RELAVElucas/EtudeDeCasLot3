@@ -1,0 +1,10 @@
+﻿@model WebApplication1.Models.Client
+@using (Html.BeginForm("AddClient", "Home", FormMethod.Post))
+{
+    <h3>Supprimer un client</h3>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Id)
+        @Html.TextBoxFor(m => m.Name)
+    </div>
+    <input class="btn btn-primary" type="submit" value="Delete" />
+}
