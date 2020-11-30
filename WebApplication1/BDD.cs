@@ -57,6 +57,24 @@ namespace Etudedecas
 
         }
 
+        public Boolean authentification(string email , string password)
+        {
+            this.connection.Open();
+            MySqlCommand cmd = this.connection.CreateCommand();
+            // Requête SQL
+            cmd.CommandText = "Select * FROM user where email = " + email + " and password = " + password ;
+
+            // Exécution de la commande SQL
+            cmd.ExecuteNonQuery();
+
+            cmd.ExecuteScalar();
+
+
+            this.connection.Close();
+
+
+
+        }
 
         public void AddContact(Client client)
         {
