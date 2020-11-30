@@ -52,29 +52,35 @@ namespace WebApplication1.Controllers
         {
             return PartialView("_DeleteClient");
         }
-        public ActionResult UpdateClientView(Client target)
+        public ActionResult UpdateClientView(string Id)
         {
-            return View("UpdateClient", target);
+            List<Client> clients = new List<Client>();
+            clients = Session["client"] as List<Client>;
+            Client client = clients.Find(c => c.Id.Equals(Id));
+            return View("UpdateClient", client);
            
         }
         public ActionResult UpdateClient(Client target)
         {
             bdd = new Bdd();
-
-            return View("Clients");
+            bdd.UpdateClient(target);
+            return GetClients();
         }
-        public ActionResult DeleteClient(Client target)
+        public ActionResult DeleteClient(string Id)
         {
+            List<Client> clients = new List<Client>();
+            clients = Session["client"] as List<Client>;
+            Client client = clients.Find(c => c.Id.Equals(Id));
             bdd = new Bdd();
-
-            return View("Clients");
+            bdd.DeleteClient(client);
+            return GetClients();
         }
         public ActionResult GetClients()
         {
-            //To Do
             List<Client> clients = new List<Client>();
             bdd = new Bdd();
             clients = bdd.getClients();
+            Session["client"] = clients;
             return View("Clients", clients);
         }
         public ActionResult About()

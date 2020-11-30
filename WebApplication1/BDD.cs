@@ -107,11 +107,8 @@ namespace Etudedecas
             MySqlCommand cmd = this.connection.CreateCommand();
 
             // Requête SQL
-            cmd.CommandText = "UPDATE client SET idClient = '@idclient' nameClient = '@nameClient', firstnameClient = '@firstnameClient', addressClient = '@addressClient' WHERE idClient = '@idclient'";
-            cmd.Parameters.AddWithValue("@idClient", client.Id);
-            cmd.Parameters.AddWithValue("@nameClient", client.Name);
-            cmd.Parameters.AddWithValue("@firstnameClient", client.FirstName);
-            cmd.Parameters.AddWithValue("@addressClient", client.Address);
+            cmd.CommandText = "UPDATE client SET idClient = '"+client.Id+"', nameClient = '"+client.Name+"', firstnameClient = '"+client.FirstName+"', addressClient = '"+client.Address+ "' WHERE idClient = '" + client.Id + "'";
+
             cmd.ExecuteNonQuery();
 
             // Fermeture de la connexion

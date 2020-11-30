@@ -1,21 +1,25 @@
 ﻿@model WebApplication1.Models.Client
-<div class="container">
-    @using (Html.BeginForm("UpdateClient", "Home", FormMethod.Post))
-    {
-    <h3>Modifier un client</h3>
-    <div class="form-group">
-        @Html.LabelFor(m => m.Name)
-        @Html.TextBoxFor(m => m.Name)
+    <div class="container">
+        @using (Html.BeginForm("UpdateClient", "Home", FormMethod.Post))
+        {
+            <h3>Modifier un client</h3>
+            <div class="form-group" read>
+                @Html.LabelFor(m => m.Id)
+                @Html.TextBoxFor(m => m.Id , new { @readonly = "readonly" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Name)
+                @Html.TextBoxFor(m => m.Name)
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.FirstName)
+                @Html.TextBoxFor(m => m.FirstName)
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Address)
+                @Html.TextBoxFor(m => m.Address)
+            </div>
+            <input class="btn btn-primary" type="submit" value="Add" />
+        }
     </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.FirstName)
-        @Html.TextBoxFor(m => m.FirstName)
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.Address)
-        @Html.TextBoxFor(m => m.Address)
-    </div>
-    <input class="btn btn-primary" type="submit" value="Add" />
-    }
-</div>
 

@@ -1,13 +1,11 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-
-<div class="row">
-    @Html.ActionLink("Afficher liste", "GetClients", "Home")
-    <div class="col-4">
-        @Html.Action("AddClientView", "Home")
+    <div class="row">
+        <div class="col-4">
+            @Html.Action("GetClients", "Home")
+        </div>
+        <div class="col-4">
+            @Html.Action("AddClientView", "Home")
+        </div>
     </div>
-    <div class="col-4">
-        @Html.Action("DeleteClientView", "Home")
-    </div>
-</div>

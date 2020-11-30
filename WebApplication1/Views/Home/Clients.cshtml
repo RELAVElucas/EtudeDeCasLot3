@@ -1,27 +1,28 @@
 ﻿@model List<WebApplication1.Models.Client>
 
-<table>
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>FirstName</th>
-            <th>Addresse</th>
-            <th>Supprimer</th>
-            <th>Modifier</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach(WebApplication1.Models.Client client in Model){
-        <tr>
-            <td>@client.Id</td>
-            <td>@client.Name</td>
-            <td>@client.FirstName</td>
-            <td>@client.Address</td>
-            <td>@Html.ActionLink("Supprimer", "DeleteClient", "Home", new { target = client })</td>
-            <td>@Html.ActionLink("Modifier", "UpdateClientView", "Home", new { target = client })</td>
-        </tr>
-        }
-    </tbody>
-</table>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">FirstName</th>
+                <th scope="col">Addresse</th>
+                <th scope="col">Supprimer</th>
+                <th scope="col">Modifier</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (WebApplication1.Models.Client client in Model)
+            {
+                <tr>
+                    <th scope="row">@client.Id</th>
+                    <td>@client.Name</td>
+                    <td>@client.FirstName</td>
+                    <td>@client.Address</td>
+                    <td>@Html.ActionLink("Supprimer", "DeleteClient", "Home", new { client.Id }, htmlAttributes: new { @class = "btn btn-danger", @role="button" })</td>
+                    <td>@Html.ActionLink("Modifier", "UpdateClientView", "Home", new { client.Id }, htmlAttributes: new { @class = "btn btn-primary", @role="button" })</td>
+                </tr>
+            }
+        </tbody>
+    </table>
 
