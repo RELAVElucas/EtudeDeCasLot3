@@ -39,21 +39,35 @@ namespace WebApplication1.Controllers
         {
             return PartialView("_AddClient");
         }
-        public void AddClient(Client client)
+        public ActionResult AddClient(Client client)
         {
-            if(client.Name != null && client.FirstName != null & client.Address != null)
+            if(client.Id != null && client.Name != null && client.FirstName != null & client.Address != null)
             {
                 bdd = new Bdd();
                 bdd.AddContact(client);
             }
+            return View("Index");
         }
         public PartialViewResult DeleteClientView()
         {
             return PartialView("_DeleteClient");
         }
-        public void DeleteClient(Client client)
+        public ActionResult UpdateClientView(Client target)
         {
+            return View("UpdateClient", target);
+           
+        }
+        public ActionResult UpdateClient(Client target)
+        {
+            bdd = new Bdd();
 
+            return View("Clients");
+        }
+        public ActionResult DeleteClient(Client target)
+        {
+            bdd = new Bdd();
+
+            return View("Clients");
         }
         public ActionResult GetClients()
         {
