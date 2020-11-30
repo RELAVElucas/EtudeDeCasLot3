@@ -25,15 +25,15 @@ namespace Etudedecas
 
         }
 
-        public List<string> getClients()
+        public List<Client> getClients()
         {
-            List<string> clients = new List<string>();
+            List<Client> clients = new List<Client>();
             this.connection.Open();
 
             MySqlCommand cmd = this.connection.CreateCommand();
 
             // Requête SQL
-            cmd.CommandText = "SELECT * From client";
+            cmd.CommandText = "SELECT idClient,nameClient,firstnameClient,addressClient From client";
 
             // Exécution de la commande SQL
             cmd.ExecuteNonQuery();
@@ -45,7 +45,12 @@ namespace Etudedecas
             {
                 while (reader.Read())
                 {
-                    clients.Add(reader.GetString(0));
+                    Client client = new Client();
+                    client.Id = reader.GetInt32(0);
+                    client.Name = reader.GetString(1);
+                    client.FirstName = reader.GetString(2);
+                    client.Address = reader.GetString(3);
+                    clients.Add(client);
                 }
                 reader.Close();
             }
@@ -57,7 +62,7 @@ namespace Etudedecas
 
         }
 
-        public Boolean authentification(string email , string password)
+       /* public Boolean authentification(string email , string password)
         {
             this.connection.Open();
             MySqlCommand cmd = this.connection.CreateCommand();
@@ -74,7 +79,7 @@ namespace Etudedecas
 
 
 
-        }
+        }*/
 
         public void AddContact(Client client)
         {

@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Etudedecas;
 using WebApplication1.Models;
 
 namespace WebApplication1.Controllers
 {
     public class HomeController : Controller
     {
+        private Bdd bdd;
         public User user;
         public ActionResult Index()
         {
@@ -30,7 +32,11 @@ namespace WebApplication1.Controllers
         }
         public void AddClient(Client client)
         {
-
+            if(client.Name != null && client.FirstName != null & client.Address != null)
+            {
+                bdd = new Bdd();
+                bdd.AddContact(client);
+            }
         }
         public PartialViewResult DeleteClientView()
         {
@@ -44,7 +50,8 @@ namespace WebApplication1.Controllers
         {
             //To Do
             List<Client> clients = new List<Client>();
-
+            bdd = new Bdd();
+            clients = bdd.getClients();
             return View("Clients", clients);
         }
         public ActionResult About()
