@@ -46,7 +46,7 @@ namespace Etudedecas
                 while (reader.Read())
                 {
                     Client client = new Client();
-                    client.Id = reader.GetInt32(0);
+                    client.Id = reader.GetString(0);
                     client.Name = reader.GetString(1);
                     client.FirstName = reader.GetString(2);
                     client.Address = reader.GetString(3);
@@ -62,31 +62,66 @@ namespace Etudedecas
 
         }
 
-       /* public Boolean authentification(string email , string password)
+        public Boolean authentification(string email, string password)
         {
             this.connection.Open();
             MySqlCommand cmd = this.connection.CreateCommand();
             // Requête SQL
-            cmd.CommandText = "Select * FROM user where email = " + email + " and password = " + password ;
+            cmd.CommandText = "Select * FROM user where email = @email and password = @password";
+            cmd.Parameters.AddWithValue("@email", email);
+            cmd.Parameters.AddWithValue("@password", password);
 
             // Exécution de la commande SQL
-            cmd.ExecuteNonQuery();
+            MySql.Data.MySqlClient.MySqlDataReader reader = cmd.ExecuteReader();
 
-            cmd.ExecuteScalar();
-
+            if (reader.HasRows)
+            {
+                return true;
+            }
+            else {
+                return false;
+            }
 
             this.connection.Close();
 
+        }
 
+        public void DeleteClient(Client client) {
+            this.connection.Open();
 
-        }*/
+            MySqlCommand cmd = this.connection.CreateCommand();
+
+            // Requête SQL
+            cmd.CommandText = "delete FROM etudedecas.client where idClient = @idClient;";
+            cmd.Parameters.AddWithValue("@idClient", client.Id);
+            cmd.ExecuteNonQuery();
+
+            // Fermeture de la connexion
+            this.connection.Close();
+        }
+
+        public void UpdateClient(Client client)
+        {
+            this.connection.Open();
+
+            MySqlCommand cmd = this.connection.CreateCommand();
+
+            // Requête SQL
+            cmd.CommandText = "UPDATE client SET idClient = '@idclient' nameClient = '@nameClient', firstnameClient = '@firstnameClient', addressClient = '@addressClient' WHERE idClient = '@idclient'";
+            cmd.Parameters.AddWithValue("@idClient", client.Id);
+            cmd.Parameters.AddWithValue("@nameClient", client.Name);
+            cmd.Parameters.AddWithValue("@firstnameClient", client.FirstName);
+            cmd.Parameters.AddWithValue("@addressClient", client.Address);
+            cmd.ExecuteNonQuery();
+
+            // Fermeture de la connexion
+            this.connection.Close();
+        }
 
         public void AddContact(Client client)
         {
             try
             {
-
-
                 this.connection.Open();
 
 

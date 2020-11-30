@@ -22,9 +22,18 @@ namespace WebApplication1.Controllers
         }
         public ActionResult Login(User user)
         {
-            // To Do
-            this.user = user;
-            return this.Index();
+            bdd = new Bdd();
+            Boolean result = bdd.authentification(user.Email, user.Password);
+            if (result)
+            {
+                this.user = user;
+                return this.Index();
+            }
+            else
+            {
+               return View("Login");
+            }
+           
         }
         public PartialViewResult AddClientView()
         {
