@@ -46,7 +46,7 @@ namespace Etudedecas
                 while (reader.Read())
                 {
                     Client client = new Client();
-                    client.Id = reader.GetInt32(0);
+                    client.Id = reader.GetString(0);
                     client.Name = reader.GetString(1);
                     client.FirstName = reader.GetString(2);
                     client.Address = reader.GetString(3);

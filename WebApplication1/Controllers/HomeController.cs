@@ -42,10 +42,21 @@ namespace WebApplication1.Controllers
         {
             return PartialView("_DeleteClient");
         }
-        public ActionResult DeleteClient(Client client)
+        public ActionResult UpdateClientView(Client target)
+        {
+            return View("UpdateClient", target);
+           
+        }
+        public ActionResult UpdateClient(Client target)
         {
             bdd = new Bdd();
-            
+
+            return View("Clients");
+        }
+        public ActionResult DeleteClient(Client target)
+        {
+            bdd = new Bdd();
+
             return View("Clients");
         }
         public ActionResult GetClients()

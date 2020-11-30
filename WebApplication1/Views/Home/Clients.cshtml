@@ -16,7 +16,8 @@
             <td>@client.Name</td>
             <td>@client.FirstName</td>
             <td>@client.Address</td>
-            <td>@Html.ActionLink("Delete","DeleteClient","Home",new {target = client })</td>
+            <td>@Html.ActionLink("Delete", "DeleteClient", "Home", new { target = client })</td>
+            <td>@Html.ActionLink("Update", "UpdateClientView", "Home", new { target = client })</td>
         </tr>
         }
     </tbody>
