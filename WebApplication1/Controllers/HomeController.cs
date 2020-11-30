@@ -30,13 +30,14 @@ namespace WebApplication1.Controllers
         {
             return PartialView("_AddClient");
         }
-        public void AddClient(Client client)
+        public ActionResult AddClient(Client client)
         {
             if(client.Name != null && client.FirstName != null & client.Address != null)
             {
                 bdd = new Bdd();
                 bdd.AddContact(client);
             }
+            return View("Index");
         }
         public PartialViewResult DeleteClientView()
         {
