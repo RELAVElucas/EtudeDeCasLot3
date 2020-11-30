@@ -42,9 +42,11 @@ namespace WebApplication1.Controllers
         {
             return PartialView("_DeleteClient");
         }
-        public void DeleteClient(Client client)
+        public ActionResult DeleteClient(Client client)
         {
-
+            bdd = new Bdd();
+            
+            return View("Clients");
         }
         public ActionResult GetClients()
         {

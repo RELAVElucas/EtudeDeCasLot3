@@ -62,24 +62,28 @@ namespace Etudedecas
 
         }
 
-       /* public Boolean authentification(string email , string password)
-        {
-            this.connection.Open();
-            MySqlCommand cmd = this.connection.CreateCommand();
-            // Requête SQL
-            cmd.CommandText = "Select * FROM user where email = " + email + " and password = " + password ;
+        public Boolean authentification(string email , string password)
+         {
+             this.connection.Open();
+             MySqlCommand cmd = this.connection.CreateCommand();
+             // Requête SQL
+             cmd.CommandText = "Select * FROM user where email = " + email + " and password = " + password ;
 
-            // Exécution de la commande SQL
-            cmd.ExecuteNonQuery();
+             // Exécution de la commande SQL
+             cmd.ExecuteNonQuery();
 
-            cmd.ExecuteScalar();
-
-
+             MySql.Data.MySqlClient.MySqlDataReader reader = cmd.ExecuteReader();
+            Boolean isConnected = false;
+            if (reader.HasRows)
+            {
+                isConnected = true;
+                reader.Close();
+            }
             this.connection.Close();
 
+            return isConnected;
 
-
-        }*/
+         }
 
         public void AddContact(Client client)
         {

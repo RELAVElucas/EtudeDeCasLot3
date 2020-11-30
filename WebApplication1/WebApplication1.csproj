@@ -212,7 +212,6 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Shared\_AddClient.cshtml" />
-    <Content Include="Views\Shared\_DeleteClient.cshtml" />
     <Content Include="Views\Home\Clients.cshtml" />
   </ItemGroup>
   <ItemGroup>
