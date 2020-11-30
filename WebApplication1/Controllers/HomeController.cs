@@ -10,25 +10,42 @@ namespace WebApplication1.Controllers
     public class HomeController : Controller
     {
         public User user;
-
         public ActionResult Index()
         {
-            if(user == null)
+            if(user != null)
             {
-                return LoginView();
+                return View("Index");
             }
-            return View();
+            return View("Login");
         }
-        [HttpPost]
         public ActionResult Login(User user)
         {
-            //TO DO Check Login
+            // To Do
             this.user = user;
             return this.Index();
         }
-        public ActionResult LoginView()
+        public PartialViewResult AddClientView()
         {
-            return View("Login");
+            return PartialView("_AddClient");
+        }
+        public void AddClient(Client client)
+        {
+
+        }
+        public PartialViewResult DeleteClientView()
+        {
+            return PartialView("_DeleteClient");
+        }
+        public void DeleteClient(Client client)
+        {
+
+        }
+        public ActionResult GetClients()
+        {
+            //To Do
+            List<Client> clients = new List<Client>();
+
+            return View("Clients", clients);
         }
         public ActionResult About()
         {

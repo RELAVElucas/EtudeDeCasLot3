@@ -167,3 +167,4 @@ E:/B+5/Utilisation des IDE/EtudeDeCasLot3/WebApplication1/obj/Debug/WebApplicati
 /Users/guillaume/Desktop/EPSI/IDE/EtudeDeCasLot3/WebApplication1/obj/Debug/WebApplication1.csproj.CopyComplete
 /Users/guillaume/Desktop/EPSI/IDE/EtudeDeCasLot3/WebApplication1/obj/Debug/WebApplication1.dll
 /Users/guillaume/Desktop/EPSI/IDE/EtudeDeCasLot3/WebApplication1/obj/Debug/WebApplication1.pdb
+/Users/guillaume/Desktop/EPSI/IDE/EtudeDeCasLot3/WebApplication1/obj/Debug/WebApplication1.csprojAssemblyReference.cache

@@ -1,0 +1,23 @@
+﻿@model List<WebApplication1.Models.Client>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>FirstName</th>
+            <th>Addresse</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(WebApplication1.Models.Client client in Model){
+        <tr>
+            <td>@client.Id</td>
+            <td>@client.Name</td>
+            <td>@client.FirstName</td>
+            <td>@client.Address</td>
+        </tr>
+        }
+    </tbody>
+</table>
+
