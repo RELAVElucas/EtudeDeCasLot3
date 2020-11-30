@@ -1,0 +1,14 @@
+﻿@model WebApplication1.Models.User
+@{
+    ViewBag.Title = "Connexion";
+}
+<div class="row">
+    @using (Html.BeginForm("Login", "Home", FormMethod.Post))
+    {
+        @Html.TextBoxFor(m => m.Email)
+        @Html.TextBoxFor(m => m.Password)
+
+        <input type="submit" value="Submit" />
+    }
+    
+</div>;

@@ -163,7 +163,6 @@ E:/B+5/Utilisation des IDE/EtudeDeCasLot3/WebApplication1/obj/Debug/WebApplicati
 /Users/guillaume/Desktop/EPSI/IDE/EtudeDeCasLot3/WebApplication1/bin/fr/System.Web.WebPages.resources.dll
 /Users/guillaume/Desktop/EPSI/IDE/EtudeDeCasLot3/WebApplication1/bin/fr/System.Web.WebPages.Deployment.resources.dll
 /Users/guillaume/Desktop/EPSI/IDE/EtudeDeCasLot3/WebApplication1/bin/fr/System.Web.WebPages.Razor.resources.dll
-/Users/guillaume/Desktop/EPSI/IDE/EtudeDeCasLot3/WebApplication1/obj/Debug/WebApplication1.csprojAssemblyReference.cache
 /Users/guillaume/Desktop/EPSI/IDE/EtudeDeCasLot3/WebApplication1/obj/Debug/WebApplication1.csproj.CoreCompileInputs.cache
 /Users/guillaume/Desktop/EPSI/IDE/EtudeDeCasLot3/WebApplication1/obj/Debug/WebApplication1.csproj.CopyComplete
 /Users/guillaume/Desktop/EPSI/IDE/EtudeDeCasLot3/WebApplication1/obj/Debug/WebApplication1.dll
