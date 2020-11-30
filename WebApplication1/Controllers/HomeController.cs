@@ -32,7 +32,7 @@ namespace WebApplication1.Controllers
         }
         public ActionResult AddClient(Client client)
         {
-            if(client.Name != null && client.FirstName != null & client.Address != null)
+            if(client.Id != null && client.Name != null && client.FirstName != null & client.Address != null)
             {
                 bdd = new Bdd();
                 bdd.AddContact(client);
