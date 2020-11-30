@@ -1,3 +1,5 @@
 ﻿WebApplication1/obj/Debug/WebApplication1.csprojAssemblyReference.cache
 .vs/WebApplication1/v16/Server
 *.suo
+.vscode
+WebApplication1/bin
