@@ -7,3 +7,4 @@ WebApplication1/bin
 WebApplication1/obj/Debug
 .vscode/iisexpress.json
 .vs/WebApplication1
+.vscode/launch.json
