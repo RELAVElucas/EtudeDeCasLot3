@@ -22,8 +22,8 @@ namespace WebApplication1.Controllers
         }
         public ActionResult Login(User user)
         {
-            bdd = new Bdd();
-            Boolean result = bdd.authentification(user.Email, user.Password);
+            //bdd = new Bdd();
+            /*Boolean result = bdd.authentification(user.Email, user.Password);
             if (result)
             {
                 this.user = user;
@@ -32,8 +32,10 @@ namespace WebApplication1.Controllers
             else
             {
                return View("Login");
-            }
-           
+            }*/
+            this.user = user;
+            return this.Index();
+
         }
         public PartialViewResult AddClientView()
         {
@@ -78,8 +80,14 @@ namespace WebApplication1.Controllers
         public ActionResult GetClients()
         {
             List<Client> clients = new List<Client>();
-            bdd = new Bdd();
-            clients = bdd.getClients();
+            //bdd = new Bdd();
+            //clients = bdd.getClients();
+            Client test = new Client();
+            test.Id = "1";
+            test.Name = "test";
+            test.FirstName = "test";
+            test.Address = "test";
+            clients.Add(test);
             Session["client"] = clients;
             return View("Clients", clients);
         }

@@ -2,7 +2,10 @@
     padding-top: 50px;
     padding-bottom: 20px;
 }
-
+.addClientForm{
+    width:180px;
+    float:right;
+}
 /* Set padding to keep content from hitting the edges */
 .body-content {
     text-align: center;
@@ -11,7 +14,9 @@
     padding-left: 40px;
     padding-right: 40px;
 }
-
+.loginConnexion{
+    margin: 0 auto;
+}
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
 */
