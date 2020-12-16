@@ -1,5 +1,5 @@
 ﻿@model WebApplication1.Models.Client
-@using (Html.BeginForm("AddClient", "Home", FormMethod.Post))
+@using (Html.BeginForm("AddClient", "Home", FormMethod.Post, new { @class = "addClientForm" }))
 {
 <h3>Ajouter un client</h3>
 <div class="form-group">

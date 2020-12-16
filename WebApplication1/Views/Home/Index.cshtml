@@ -1,11 +1,12 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
+    
     <div class="row">
-        <div class="col-4">
+        <div style="flex: 0 0 33.333333%;">
             @Html.Action("GetClients", "Home")
         </div>
-        <div class="col-4">
+        <div style="flex: 0 0 33.333333%;">
             @Html.Action("AddClientView", "Home")
         </div>
     </div>
