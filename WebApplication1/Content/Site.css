@@ -5,9 +5,11 @@
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
-    text-align:center;
-    padding-left: 15px;
-    padding-right: 15px;
+    text-align: center;
+    margin-top: 10px;
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -22,4 +24,31 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+.button-container {
+    display: flex;
+    padding: 20px;
+    text-align: left;
+}
+.addclient {
+    padding: 20px;
+}
+.table {
+    padding: 20px;
+}
+.hearder-table {
+    background-color: crimson;
+    color: white;
+    font-size: 14px; 
+    font-weight: bold;
+    padding:10px
+}
+.body-table {
+    background-color: whitesmoke;
+    font-size: 14px;
+    text-align: center;
+    padding: 10px 0px
+}
+.supprimer {
+
 }
