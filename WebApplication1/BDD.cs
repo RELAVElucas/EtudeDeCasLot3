@@ -115,7 +115,7 @@ namespace Etudedecas
             this.connection.Close();
         }
 
-        public void AddContact(Client client)
+        public string AddContact(Client client)
         {
             try
             {
@@ -138,10 +138,12 @@ namespace Etudedecas
 
                 // Fermeture de la connexion
                 this.connection.Close();
+                return "success";
+
             }
             catch (MySql.Data.MySqlClient.MySqlException e)
             {
-                Console.WriteLine("Champs avec l'id :" + client.Id + " déja renseigner en base ");
+                return "Champs avec l'id :" + client.Id + " déja renseigner en base ";
             }
         }
 

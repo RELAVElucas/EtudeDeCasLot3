@@ -1,49 +1,49 @@
 ﻿@model List<WebApplication1.Models.Client>
-<div class="row">
-    <div class="col-4 button-container">
-        <button type="button" class="btn btn-primary addclient" data-toggle="modal" data-target="#exampleModal">
-            Ajouter un client
-        </button>
-    </div>
-    <div class="col-12">
-        <table class="table">
-            <thead class="hearder-table">
-                <tr>
-                    <th scope="col">ID</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">FirstName</th>
-                    <th scope="col">Addresse</th>
-                    <th scope="col">Supprimer</th>
-                    <th scope="col">Modifier</th>
-                </tr>
-            </thead>
-            <tbody class="body-table">
-                @foreach (WebApplication1.Models.Client client in Model)
-                {
+    <div class="row">
+        <p style="color: red">@ViewBag.Idexist</p>
+        <div class="col-4 button-container">
+            <button type="button" class="btn btn-primary addclient" data-toggle="modal" data-target="#exampleModalCenter">
+                Ajouter un client
+            </button>
+        </div>
+        <div class="col-12">
+            <table class="table">
+                <thead class="hearder-table">
                     <tr>
-                        <th scope="row">@client.Id</th>
-                        <td>@client.Name</td>
-                        <td>@client.FirstName</td>
-                        <td>@client.Address</td>
-                        <td>@Html.ActionLink("Supprimer", "DeleteClient", "Home", new { client.Id }, htmlAttributes: new { @class = "btn btn-danger", @role = "button" })</td>
-                        <td>@Html.ActionLink("Modifier", "UpdateClientView", "Home", new { client.Id }, htmlAttributes: new { @class = "btn btn-primary", @role = "button" })</td>
+                        <th scope="col">ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">FirstName</th>
+                        <th scope="col">Addresse</th>
+                        <th scope="col">Supprimer</th>
+                        <th scope="col">Modifier</th>
                     </tr>
-                }
-            </tbody>
-        </table>
-    </div>
+                </thead>
+                <tbody class="body-table">
+                    @foreach (WebApplication1.Models.Client client in Model)
+                    {
+                        <tr>
+                            <th scope="row">@client.Id</th>
+                            <td>@client.Name</td>
+                            <td>@client.FirstName</td>
+                            <td>@client.Address</td>
+                            <td>@Html.ActionLink("Supprimer", "DeleteClient", "Home", new { client.Id }, htmlAttributes: new { @class = "btn btn-danger", @role = "button" })</td>
+                            <td>@Html.ActionLink("Modifier", "UpdateClientView", "Home", new { client.Id }, htmlAttributes: new { @class = "btn btn-primary", @role = "button" })</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
 
-    
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="col-4">
-                    @Html.Action("AddClientView", "Home")
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        @Html.Action("AddClientView", "Home")
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
+
+
+
+
 
 

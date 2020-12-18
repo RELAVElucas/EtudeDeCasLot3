@@ -1,22 +1,27 @@
 ﻿@model WebApplication1.Models.Client
+
 @using (Html.BeginForm("AddClient", "Home", FormMethod.Post, new { @class = "addClientForm" }))
 {
-<h3>Ajouter un client</h3>
-<div class="form-group">
-    @Html.LabelFor(m => m.Id)
-    @Html.TextBoxFor(m => m.Id)
-</div>
-<div class="form-group">
-    @Html.LabelFor(m => m.Name)
-    @Html.TextBoxFor(m => m.Name)
-</div>
-<div class="form-group">
-    @Html.LabelFor(m => m.FirstName)
-    @Html.TextBoxFor(m => m.FirstName)
-</div>
-<div class="form-group">
-    @Html.LabelFor(m => m.Address)
-    @Html.TextBoxFor(m => m.Address)
-</div>
-<input class="btn btn-primary" type="submit" value="Add" />
+    <div class="form-container">
+        <h3>Ajouter un client</h3>
+        <div class="form-group row">
+            <div class="col-4">@Html.LabelFor(m => m.Id)</div>
+            <div class="col-4">@Html.TextBoxFor(m => m.Id)</div>
+        </div>
+        <div class="form-group row">
+            <div class="col-4">@Html.LabelFor(m => m.Name)</div>
+            <div class="col-4">@Html.TextBoxFor(m => m.Name)</div>
+        </div>
+        <div class="form-group row">
+            <div class="col-4">@Html.LabelFor(m => m.FirstName)</div>
+            <div class="col-4">@Html.TextBoxFor(m => m.FirstName)</div>
+        </div>
+        <div class="form-group row">
+            <div class="col-4">@Html.LabelFor(m => m.Address)</div>
+            <div class="col-4">@Html.TextBoxFor(m => m.Address)</div>
+        </div>
+        <input class="btn btn-primary" type="submit" value="Ajouter le client" />
+    </div>
+
+
 }
