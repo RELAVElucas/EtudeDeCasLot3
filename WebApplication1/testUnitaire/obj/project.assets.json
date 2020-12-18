@@ -4629,11 +4629,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\B+5\\Utilisation des IDE\\EtudeDeCasLot3\\TestUnitaire\\TestUnitaire.csproj",
-      "projectName": "TestUnitaire",
-      "projectPath": "E:\\B+5\\Utilisation des IDE\\EtudeDeCasLot3\\TestUnitaire\\TestUnitaire.csproj",
+      "projectUniqueName": "E:\\B+5\\Utilisation des IDE\\EtudeDeCasLot3\\WebApplication1\\testUnitaire\\testUnitaire.csproj",
+      "projectName": "testUnitaire",
+      "projectPath": "E:\\B+5\\Utilisation des IDE\\EtudeDeCasLot3\\WebApplication1\\testUnitaire\\testUnitaire.csproj",
       "packagesPath": "C:\\Users\\lucas.relave\\.nuget\\packages\\",
-      "outputPath": "E:\\B+5\\Utilisation des IDE\\EtudeDeCasLot3\\TestUnitaire\\obj\\",
+      "outputPath": "E:\\B+5\\Utilisation des IDE\\EtudeDeCasLot3\\WebApplication1\\testUnitaire\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "E:\\Microsoft\\Xamarin\\NuGet\\"

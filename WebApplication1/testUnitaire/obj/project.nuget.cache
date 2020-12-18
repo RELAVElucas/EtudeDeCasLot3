@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cdWCRAb4baPAjTCtmOwZyZgo0xRmOxqO4hsOLKifIz4/ERh+jpXorHolREUDRZZ/b8SknX7EhnHeGA065dRaWQ==",
+  "dgSpecHash": "vmLWmWwFxjtHOOsx3DeCYKRNU80KYwOB0TcQpQtqWmZ/PEteNVjOYIDWTUNN23G6WjY0lwyboDDu9FxHst4Jvg==",
   "success": true,
-  "projectFilePath": "E:\\B+5\\Utilisation des IDE\\EtudeDeCasLot3\\TestUnitaire\\TestUnitaire.csproj",
+  "projectFilePath": "E:\\B+5\\Utilisation des IDE\\EtudeDeCasLot3\\WebApplication1\\testUnitaire\\testUnitaire.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lucas.relave\\.nuget\\packages\\microsoft.codecoverage\\16.5.0\\microsoft.codecoverage.16.5.0.nupkg.sha512",
     "C:\\Users\\lucas.relave\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",
